@@ -17,6 +17,7 @@ var compressedString = function(word) {
             if (count > 0) {
                 answer += count + word[i]    
             }
+            
             count = 1;
         }
     }

@@ -6,8 +6,9 @@ var removeDuplicates = function(nums) {
     let pointer = 0;
     
     while (pointer !== nums.length - 1) {
-        console.log(pointer)
+
         if (nums[pointer] === nums[pointer + 1]) {
+                    console.log(pointer)
             nums.splice(pointer, 1);
         } else {
             pointer++;

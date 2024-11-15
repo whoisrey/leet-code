@@ -3,15 +3,14 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
-    let pointer = 0;
+    let pointer = nums.length - 1;
     
-    while (pointer !== nums.length - 1) {
+    while (pointer > 0) {
 
-        if (nums[pointer] === nums[pointer + 1]) {
-                    console.log(pointer)
+        if (nums[pointer -1] === nums[pointer]) {
             nums.splice(pointer, 1);
         } else {
-            pointer++;
+            pointer--;
         }
     }
     

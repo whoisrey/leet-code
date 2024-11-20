@@ -3,12 +3,20 @@
  * @return {string}
  */
 var longestPalindrome = function(s) {
-  let ll = 0, rr = 0;
-  
-  for (let i = 0; i < s.length; i++)
-    for (let j of [i, i+1])
-      for (l = i, r = j; s[l] && s[l] === s[r]; l--, r++)
-        [ll, rr] = (r-l+1) > (rr-ll+1) ? [l, r] : [ll, rr];
-  
-  return s.substring(ll, rr+1);
+  var max = '';
+  for (var i = 0; i < s.length; i++) {
+    for (var j = 0; j < 2; j++) {
+      var left = i;
+      var right = i + j;
+      while (s[left] && s[left] === s[right]) {
+        left--;
+        right++;
+      }
+      if ((right - left - 1) > max.length) {
+        max = s.substring(left + 1, right);
+      }
+        
+    }
+  }
+  return max;
 };

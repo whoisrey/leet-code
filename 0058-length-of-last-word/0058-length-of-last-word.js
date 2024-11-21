@@ -22,5 +22,5 @@ var lengthOfLastWord = function(s) {
         }
     }
     
-    return s.substring(firstIndex, lastIndex + 1).length;
+    return lastIndex + 1 - firstIndex;
 };

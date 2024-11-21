@@ -7,7 +7,10 @@ var search = function(nums, target) {
     const firstElement = nums[0];
     const lastElement = nums[nums.length - 1];
     const isNearFirst = firstElement - target < lastElement - target;
+    const includeTarget = lastElement - target >= 0;
     let answer = -1;
+    
+    if (!includeTarget) return -1;
     
     if (isNearFirst) {
         for (let i = 0; i < nums.length; i++) {

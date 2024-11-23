@@ -11,9 +11,9 @@ var plusOne = function(digits) {
                 digits[i] = 0;
                 digits.unshift(1);
                 break;
-            } else {
+            } 
                 digits[i] = 0;
-            }
+            
         } else {
             digits[i]++;
             break;

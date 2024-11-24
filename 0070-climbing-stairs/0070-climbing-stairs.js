@@ -3,6 +3,8 @@
  * @return {number}
  */
 var climbStairs = function(n) {
+    if (n === 1) return 1;
+    
     let firstPrev = 1;
     let secondPrev = 1;
     let answer = 0;
@@ -13,5 +15,5 @@ var climbStairs = function(n) {
         secondPrev = answer;
     }
     
-    return n !== 1 ? answer : 1;
+    return answer;
 };

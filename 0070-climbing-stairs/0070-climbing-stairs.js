@@ -3,11 +3,15 @@
  * @return {number}
  */
 var climbStairs = function(n) {
-    const answer = [1, 1];
+    let firstPrev = 1;
+    let secondPrev = 1;
+    let answer = 0;
     
     for (let i = 2; i <= n; i++) {
-        answer.push(answer[i - 2] + answer[i - 1]);
+        answer = firstPrev + secondPrev;
+        firstPrev = secondPrev;
+        secondPrev = answer;
     }
     
-    return answer[n]
+    return n !== 1 ? answer : 1;
 };

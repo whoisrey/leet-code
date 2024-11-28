@@ -17,7 +17,6 @@ var singleNumber = function(nums) {
     
     
     for (const i in temp) {
-        if (temp[i] === 1) return parseInt(i);
+        if (temp[i] === 1) return Number(i);
     }
-
 };

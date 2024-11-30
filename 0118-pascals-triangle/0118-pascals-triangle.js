@@ -3,30 +3,18 @@
  * @return {number[][]}
  */
 var generate = function(numRows) {
-    let count = 1;
-    const answer = [[1]];
+    const answerArray = [];
     
-    while (count < numRows) {
-        answer.push(makeArray(answer[count - 1], count));
-        count++;
-    }
-    
-    function makeArray(arr, n) {
-        const array = [];
-        let count = 0;
-        
-        while (count <= n) {
-            if (count === 0 || count === n) {
-                array[count] = 1;
+    for (let i = 0; i < numRows; i++) {
+        const elementArray = [];
+        for (let j = 0; j <= i; j++) {
+            if (j === 0 || j === i){
+                elementArray.push(1);
             } else {
-                array[count] = arr[count - 1] + arr[count];
+                elementArray.push(answerArray[i - 1][j - 1] + answerArray[i - 1][j]);
             }
-            
-            count++;
         }
-        
-        return array;
+        answerArray.push(elementArray);
     }
-    
-    return answer;
+    return answerArray;
 };

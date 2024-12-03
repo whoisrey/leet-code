@@ -10,11 +10,10 @@ var addSpaces = function(s, spaces) {
     for (let i = 0; i < s.length; i++) {
         if (i === spaces[pointer]) {
             answer += " ";
-            answer += s[i];
             pointer++;
-        } else {
-            answer += s[i];
-        }
+        } 
+        
+        answer += s[i];
     }
     
     return answer;

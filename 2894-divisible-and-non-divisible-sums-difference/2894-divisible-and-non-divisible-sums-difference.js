@@ -9,7 +9,7 @@ var differenceOfSums = function(n, m) {
     let pointer = 1;
     
     while (pointer < n + 1) {
-        if (pointer % m === 0) {
+        if (pointer % m !== 0) {
             num1 += pointer;
         } else {
             num2 += pointer;
@@ -18,5 +18,5 @@ var differenceOfSums = function(n, m) {
         pointer++;
     }
     
-    return num2 - num1;
+    return num1 - num2;
 };

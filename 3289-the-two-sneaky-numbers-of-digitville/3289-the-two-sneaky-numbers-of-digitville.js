@@ -7,7 +7,7 @@ var getSneakyNumbers = function(nums) {
     const answer = [];
         
     while (nums.length) {
-        let num = nums.pop();
+        const num = nums.pop();
       
         if (temp.includes(num)) {
             answer.push(num);

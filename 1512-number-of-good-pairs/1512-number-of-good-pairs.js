@@ -12,14 +12,11 @@ var numIdenticalPairs = function(nums) {
         } else {
             hash[i]++;
         }
-    }
-    
-    console.log(hash)
-    
+    } 
     
     for (const i in hash) {
         if (hash[i] > 1) {
-            answer += ((hash[i] - 1) * (hash[i]) / 2)
+            answer += ((hash[i] - 1) * (hash[i]) / 2);
         }
     }
     

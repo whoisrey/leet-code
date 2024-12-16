@@ -4,19 +4,19 @@
  * @return {number[]}
  */
 var pivotArray = function(nums, pivot) {
-    const arr1 = [];
-    const arr2 = [];
-    const arr3 = [];
+    const answer = [];
     
-    for (let i = 0; i < nums.length; i++) {
-        if(nums[i] < pivot) {
-            arr1.push(nums[i]);
-        } else if (nums[i] === pivot) {
-            arr2.push(nums[i]);
-        } else {
-            arr3.push(nums[i]);
-        }
+    for (const num of nums) {
+        if (num < pivot) answer.push(num);
     }
     
-    return [...arr1, ...arr2, ...arr3];
+    for (const num of nums) {
+        if (num === pivot) answer.push(num);
+    }
+    
+    for (const num of nums) {
+        if (num > pivot) answer.push(num);
+    }
+    
+    return answer;
 };

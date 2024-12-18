@@ -4,7 +4,6 @@
  * @return {string}
  */
 var stringHash = function(s, k) {
-    const array = [];
     const point = s.length / k;
     let count = 0;
     let answer = "";
@@ -21,7 +20,6 @@ var stringHash = function(s, k) {
             sum += string.charCodeAt(i) - 97
         }
         
-        // array.push(sum);
         
         str = String.fromCodePoint(sum % 26 + 97);
         answer += str
@@ -30,9 +28,4 @@ var stringHash = function(s, k) {
     }
     
     return answer;
-    
-    // const arr = array.map((element) => String.fromCodePoint(element % 26 + 97));
-    
-    // return arr.reduce((a, b) => a + b)
-    
 };

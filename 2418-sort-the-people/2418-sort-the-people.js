@@ -4,10 +4,8 @@
  * @return {string[]}
  */
 var sortPeople = function(names, heights) {
-    
     const hash = {};
     const answer = [];
-    
     
     for (let i = 0; i < names.length; i++) {
         hash[heights[i]] = names[i];

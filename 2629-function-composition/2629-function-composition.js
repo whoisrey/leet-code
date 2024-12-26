@@ -3,8 +3,6 @@
  * @return {Function}
  */
 var compose = function(functions) {
-    const arr = [...functions];
-    
     return function(x) {
         let result = x;
         

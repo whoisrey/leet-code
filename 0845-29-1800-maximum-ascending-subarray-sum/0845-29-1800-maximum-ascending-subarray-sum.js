@@ -14,9 +14,7 @@ var maxAscendingSum = function(nums) {
             sum += nums[pointer];
             cache.push(sum);
             sum = 0;
-        } else if (nums[pointer] === nums[pointer + 1]) {
-            sum = 0;
-        }
+        } 
         
         pointer++;
     }

@@ -12,6 +12,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [2551-apply-operations-to-an-array](https://github.com/whoisrey/leet-code/tree/master/2551-apply-operations-to-an-array) |
+| [3483-alternating-groups-ii](https://github.com/whoisrey/leet-code/tree/master/3483-alternating-groups-ii) |
 ## Two Pointers
 |  |
 | ------- |
@@ -24,4 +25,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [2463-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/whoisrey/leet-code/tree/master/2463-minimum-recolors-to-get-k-consecutive-black-blocks) |
+| [3483-alternating-groups-ii](https://github.com/whoisrey/leet-code/tree/master/3483-alternating-groups-ii) |
 <!---LeetCode Topics End-->
